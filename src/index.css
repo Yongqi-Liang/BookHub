@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Inter:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-book-bg: #a39100;
+  --color-book-card: #ffd54f;
+  --color-book-text: #2d2a00;
+  --color-book-accent: #423d00;
+  --color-book-paper: #fdf6e3;
+}
+
+@layer base {
+  html, body, #root {
+    @apply h-full w-full;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    @apply antialiased bg-book-bg text-book-text;
+    background-image: linear-gradient(to bottom, #a39100, #8e7e00);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-shadow-glow {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.font-serif {
+  font-family: 'Crimson Pro', serif;
+}
